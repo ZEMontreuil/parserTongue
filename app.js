@@ -13,7 +13,7 @@ const createFile = writeFilePath => {
       throw error;
     }
     console.log(`Saved file ${writeFilePath}`);
-  })
+  });
   return true;
 }
 
@@ -30,7 +30,7 @@ const readToFile = (readStream, writeStream) => {
 const parseLines = text => {
   text = text.split('\n');
   text.forEach((l, index, arr) => {
-    arr[index] = `\n${index}${l}`
+    arr[index] = `\n${index}${l}`;
   });
   return text;
 }
